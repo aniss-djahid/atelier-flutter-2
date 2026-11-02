@@ -1,4 +1,5 @@
 
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,17 +19,28 @@ class MainApp extends StatelessWidget {
               Text('Hello World!'),
               Text('Bienvenue dans Flutter'),
               Container(
-   margin: EdgeInsets.all(20),
-  padding: EdgeInsets.all(16),
-  decoration: BoxDecoration(
-    color: Colors.blueAccent,
-    borderRadius: BorderRadius.circular(12),
-  ),
-  child: Text(
-    'Boîte stylisée avec Container',
-    style: TextStyle(color: Colors.white, fontSize: 18),
-  ),
-),
+                margin: EdgeInsets.all(20),
+                padding: EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: Colors.blueAccent,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Text(
+                  'Boîte stylisée avec Container',
+                  style: TextStyle(color: Colors.white, fontSize: 18),
+                ),
+              ),
+              Stack(
+                alignment: Alignment.topRight,
+                children: [
+                  Container(width: 200, height: 200, color: Colors.blue[100]),
+                  Icon(Icons.star, size: 100, color: Colors.amber),
+                  Text(
+                    "Superposé !",
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
